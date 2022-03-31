@@ -1,5 +1,7 @@
 # Slurm Simple Guide
 
+Here is a summary of how to generate a Slurm script and submit/monitor/manage jobs.
+
 # Job Scripts
 
 ## Job Submission Options
