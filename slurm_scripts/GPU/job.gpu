@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#SBATCH --job-name=CudaTest           # Job name
+#SBATCH --output=CudaTest.%j.out     # Name of stdout output file 
+#SBATCH --nodes=1                  # Total number of nodes requested
+#SBATCH --gpus-per-node=1      #number of gpus
+#SBATCH -t 01:30:00           # Run time (hh:mm:ss) - 1.5 hours
+
+
+./saxpy.e

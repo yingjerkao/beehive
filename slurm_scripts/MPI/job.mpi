@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH --job-name=MPITest # Job name
+#SBATCH -o MPITest.%j.out  # Name of stdout output file (%j expands to jobId)
+#SBATCH --partition=gpu       # Queue name
+#SBATCH --nodes=2                 # Total number of nodes requested
+#SBATCH --ntasks-per-node=4       # Number of procersses per node
+#SBATCH --time=01:30:00           # Run time (hh:mm:ss) - 1.5 hours
+
+echo "MPI Test"
+source /opt/intel/oneapi/setvars.sh
+mpiexec ./mpi_test.e
